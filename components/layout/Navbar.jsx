@@ -33,7 +33,7 @@ function Navbar({ onAvatarClick }) {
       </div>
 
       {/* Icons */}
-      <div className="flex gap-9 relative items-center">
+      <div className="flex gap-5 md:gap-9 relative items-center">
         <p className="relative">
           <IoChatbubblesOutline className="text-2xl" />
           <span className="absolute -top-2 -right-2 bg-red-400 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">

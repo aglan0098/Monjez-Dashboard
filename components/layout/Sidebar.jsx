@@ -32,9 +32,23 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
         }`}
       >
         {/* Sidebar Header */}
-        <div className="h-16 p-2 flex items-center gap-5 bg-gray-100 rounded-lg">
+        <div className=" relative h-16 p-2 flex items-center gap-5 bg-gray-100 rounded-lg">
           <Image src="/images/logo.png" alt="logo" width={50} height={50} />
           <h2 className="text-md font-bold">نظام منجز</h2>
+
+          {/* toggle button */}
+          <button
+            onClick={toggleSidebar}
+            className={`absolute bg-white text-main p-1 rounded-lg z-30 transition-all duration-300 shadow shadow-gray-300 cursor-pointer ${
+              isOpen ? "-left-[35px]" : "-left-[50px]"
+            }`}
+          >
+            {isOpen ? (
+              <TbArrowBarToRight className="w-6 h-6" />
+            ) : (
+              <TbArrowBarToLeft className="w-6 h-6" />
+            )}
+          </button>
         </div>
 
         {/* Sidebar Menu */}
@@ -224,20 +238,6 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
           <span>تحميل دليل المستخدم</span>
         </button>
       </div>
-
-      {/* Toggle Button */}
-      <button
-        onClick={toggleSidebar}
-        className={`fixed top-1/13 transform -translate-y-1/2 bg-white text-main p-1 rounded-lg z-30 transition-all duration-300 shadow shadow-gray-300 cursor-pointer ${
-          isOpen ? "right-56" : "right-0"
-        }`}
-      >
-        {isOpen ? (
-          <TbArrowBarToRight className="w-6 h-6" />
-        ) : (
-          <TbArrowBarToLeft className="w-6 h-6" />
-        )}
-      </button>
     </>
   );
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="sm:flex justify-between items-center bg-gray-100 py-5 px-10">
+    <div className="sm:flex justify-between items-center bg-gray-100 py-5 px-5 md:px-10">
       <div className="mb-3 md:m-0">
-        <ul className="flex gap-5 mb-4 text-[15px] text-gray-800">
+        <ul className="flex gap-4 sm:gap-5 mb-4 text-[15px] text-gray-800">
           <li>النماذج</li>
           <li>عن النظام</li>
           <li>البوابة الداخلية</li>

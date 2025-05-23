@@ -21,7 +21,7 @@ export default function Home() {
         <div className="bg-gray-100 text-gray-500 rounded-xl mb-6 mx-auto sm:mx-0 w-fit p-1 flex justify-evenly">
           <button
             onClick={() => handleTabClick("general")}
-            className={`px-5 md:px-11 py-3 cursor-pointer rounded-lg text-md ${
+            className={`px-4 md:px-11 py-3 cursor-pointer rounded-lg text-md ${
               activeTab === "general" ? "bg-white text-main" : ""
             }`}
           >
@@ -29,7 +29,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => handleTabClick("secret")}
-            className={`px-5 md:px-11 py-3 cursor-pointer rounded-lg text-md ${
+            className={`px-4 md:px-11 py-3 cursor-pointer rounded-lg text-md ${
               activeTab === "secret" ? "bg-white text-main" : ""
             }`}
           >
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-fr">
           {currentCards.map((card) => (
             <Link href="/transactions" key={card.id}>
               <Card
